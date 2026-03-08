@@ -6,4 +6,8 @@ Baron T.
 
 # Date of creation 
 March 5, 2026
+
+# Trello Boards
+https://trello.com/b/8tJQ0vML/team-12 (group)
+https://trello.com/b/akw8qrzO/build-sleep-outside-app (private)
  
