@@ -1,8 +1,14 @@
 # Project Name
-Sleep Outside
+WDD 330 - Sleep Outside Project
 
-# Author
-Baron T.
+# Team 12 members
+1. Elohim Baron Tshibasu
+2. Kelsey Hansel
+3. Melinda Competente
+4. Kamohelo Godfrey Mejaele
+5. Lewis Karume
+6. Wadzanai Murombedzi
+
 
 # Date of creation 
 March 5, 2026
