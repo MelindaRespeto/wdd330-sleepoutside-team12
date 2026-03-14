@@ -60,13 +60,32 @@ export default class ProductList {
         });
     }
 }
+// ProductList.mjs
+
 export default class ProductList {
-    constructor(container) {
-        this.container = container;
+    /**
+     * Constructor for ProductList
+     * @param {string} category - The category of products to display
+     * @param {object} dataSource - The object that provides product data
+     * @param {HTMLElement} listElement - The HTML element (<ul>) where products will be rendered
+     */
+    constructor(category, dataSource, listElement) {
+        this.category = category;       // store the product category
+        this.dataSource = dataSource;   // store the data source (e.g., ProductData instance)
+        this.listElement = listElement; // store the target HTML element
     }
 
-    render(products) {
-        this.container.innerHTML = '';
+    /**
+     * Render the products of this category into the listElement
+     */
+    render() {
+        // Clear the container first
+        this.listElement.innerHTML = '';
+
+        // Get products for this category from the dataSource
+        const products = this.dataSource.getProducts(this.category);
+
+        // Loop through each product and append as <li>
         products.forEach(product => {
             const isDiscounted = product.FinalPrice < product.SuggestedRetailPrice;
             const productHTML = `
@@ -80,7 +99,7 @@ export default class ProductList {
           </p>
         </li>
       `;
-            this.container.innerHTML += productHTML;
+            this.listElement.innerHTML += productHTML;
         });
     }
 }
