@@ -16,6 +16,11 @@ export default class ProductDetails {
       return;
     }
 
+    if (!this.productId) {
+      console.error("No product id in URL");
+      return;
+    }
+
     // render product HTML
     this.renderProductDetails();
 
