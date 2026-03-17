@@ -5,23 +5,19 @@ import ProductData from './ProductData.js';
 import ProductList from './ProductList.mjs'; // default export
 
 // 2. Create an instance of ProductData
-const productData = new ProductData(); // use lowercase variable name
-const products = productData.getProducts(); // get the array of products
+const productData = new ProductData();
 
-// 3. Select the <ul> container in HTML
+// 3. Render all products
 const container = document.querySelector('.product-list'); // make sure <ul class="product-list"> exists
-
-// 4. Create a ProductList instance
 const productList = new ProductList('all', productData, container); // pass category, dataSource, listElement
-
-// 5. Render the products
 productList.render();
 
-// Example for another category if needed
-const tentsList = document.querySelector('.tents-list');
+// 4. Render tents category
+const tentsList = document.querySelector('.tents-list'); // make sure <ul class="tents-list"> exists
 const tents = new ProductList('tents', productData, tentsList);
 tents.render();
 
-const bagsList = document.querySelector('.bags-list');
+// 5. Render sleeping bags category
+const bagsList = document.querySelector('.bags-list'); // make sure <ul class="bags-list"> exists
 const sleepingBags = new ProductList('sleepingBags', productData, bagsList);
 sleepingBags.render();
